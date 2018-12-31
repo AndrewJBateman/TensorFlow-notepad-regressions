@@ -56,7 +56,7 @@ class LogisticRegression {
       .matMul(this.weights)
       .sigmoid()
       .greater(this.options.decisionBoundary)
-      .cast('float32');
+      .cast('float32'); //tell tensorflow to treat values as float32 (numbers) not boolean. 
   }
 
   test(testFeatures, testLabels) {
@@ -67,7 +67,7 @@ class LogisticRegression {
       .sub(testLabels)
       .abs()
       .sum()
-      .get();
+      .get(); // to get actual number incorrect from tensor
 
     return (predictions.shape[0] - incorrect) / predictions.shape[0];
   }
@@ -94,7 +94,7 @@ class LogisticRegression {
 
     return features.sub(mean).div(variance.pow(0.5));
   }
-
+  //record cost, same as Cross Entropy or MSE
   recordCost() {
     const guesses = this.features.matMul(this.weights).sigmoid();
 
@@ -120,6 +120,7 @@ class LogisticRegression {
     this.costHistory.unshift(cost);
   }
 
+  //use costHistory to update learning rate
   updateLearningRate() {
     if (this.costHistory.length < 2) {
       return;
