@@ -94,7 +94,7 @@ class LogisticRegression {
 
     return features.sub(mean).div(variance.pow(0.5));
   }
-  //record cost, same as Cross Entropy or MSE
+  //record cost, same as Cross Entropy or MSE. Implement equation for linear regression
   recordCost() {
     const guesses = this.features.matMul(this.weights).sigmoid();
 

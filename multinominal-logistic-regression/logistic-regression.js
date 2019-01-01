@@ -60,12 +60,12 @@ class LogisticRegression {
     return this.processFeatures(observations)
       .matMul(this.weights)
       .softmax()
-      .argMax(1);
+      .argMax(1); //largest value along the horizontal axis. 
   }
 
   test(testFeatures, testLabels) {
     const predictions = this.predict(testFeatures);
-    testLabels = tf.tensor(testLabels).argMax(1);
+    testLabels = tf.tensor(testLabels).argMax(1); //take max index value along the 1 axis
 
     const incorrect = predictions
       .notEqual(testLabels)
@@ -83,9 +83,8 @@ class LogisticRegression {
     } else {
       features = this.standardize(features);
     }
-
+    //append ones column then return processed features
     features = tf.ones([features.shape[0], 1]).concat(features, 1);
-
     return features;
   }
 
@@ -94,12 +93,13 @@ class LogisticRegression {
 
     const filler = variance
       .cast('bool')
-      .logicalNot()
+      .logicalNot() //change any zeros to ones to avoid Nan when dividing etc. 
       .cast('float32');
 
     this.mean = mean;
-    this.variance = variance.add(filler);
+    this.variance = variance.add(filler); // any zeros with ones.
 
+    //variance tensor is unmodified whereas this.variance has had zeros replaced with ones. 
     return features.sub(mean).div(this.variance.pow(0.5));
   }
 
@@ -117,7 +117,7 @@ class LogisticRegression {
           guesses
             .mul(-1)
             .add(1)
-            .add(1e-7)
+            .add(1e-7) //add constant to avoid log(0)
             .log()
         );
 

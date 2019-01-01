@@ -3,7 +3,7 @@ const tf = require('@tensorflow/tfjs');
 const LogisticRegression = require('./logistic-regression');
 const plot = require('node-remote-plot');
 const _ = require('lodash');
-const mnist = require('mnist-data');
+const mnist = require('mnist-data'); //load training sets
 
 function loadData() {
   const mnistData = mnist.training(0, 60000);
