@@ -1,5 +1,6 @@
 {
-  "name": "linear_regression",
+  "name": "tensorflow-linear-regressions",
+  "repo": "https://github.com/AndrewJBateman/TensorFlow-notepad-regressions",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
