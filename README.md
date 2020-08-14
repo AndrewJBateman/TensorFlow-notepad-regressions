@@ -1,10 +1,10 @@
-# TensorFlow Regressions
+# :zap: TensorFlow Regressions
 
-Code using TensorFlow regressions in javascript in order to understand the mathematics and programming techniques that are used in the most common Machine Learning algorithms.
+* Code using TensorFlow regressions in javascript in order to understand the mathematics and programming techniques that are used in the most common Machine Learning algorithms.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
-## Table of contents
+## :page_facing_up: Table of contents
 
 * [General info](#general-info)
 * [Screenshots](#screenshots)
@@ -15,21 +15,18 @@ Code using TensorFlow regressions in javascript in order to understand the mathe
 * [Inspiration](#inspiration)
 * [Contact](#contact)
 
-## General info
+## :books: General info
 
-The Machine-Learning course contains 13 sections and 1 Appendix, as listed below:
+* The Machine-Learning course contains 13 sections and 1 Appendix, as listed below:
 
 **Section 1: What is machine learning?** Solving machine-learning problems, link to Github starter pack, identifying relevent data, dataset structure, observation data. Store as an array of inner arrays.
 
 **Section 2: Algorithm Overview** K-Nearest Neighbor (KNN), the Lodash javascript library, chaining lodash functions, creating and testing a KNN algorithm.
 
-The k-nearest neighbors (KNN) algorithm is a simple, supervised machine learning algorithm that can be used to solve both classification and regression problems. It’s easy to implement and understand, but becomes significantly slower as the size of that data in use grows.
-
-KNN finds the distances between a query and all the examples in the data, selecting the specified number examples (K) closest to the query, then votes for the most frequent label (in the case of classification) or averages the labels (in the case of regression).
-
-Using Random Test Data, Gauging Accuracy by comparing actual reult with testset.
-
-Normalisation
+* The k-nearest neighbors (KNN) algorithm is a simple, supervised machine learning algorithm that can be used to solve both classification and regression problems. It’s easy to implement and understand, but becomes significantly slower as the size of that data in use grows.
+* KNN finds the distances between a query and all the examples in the data, selecting the specified number examples (K) closest to the query, then votes for the most frequent label (in the case of classification) or averages the labels (in the case of regression).
+* Using Random Test Data, Gauging Accuracy by comparing actual reult with testset.
+* Normalisation
 
 **Section 3: Tensor JS** Tensor Shape and Dimension. Dimensions (mostly 1 and 2 dimensional arrays will be used).
 
@@ -57,42 +54,37 @@ Elementwise Operations: const data = tf.tensor([1,2,3]). Tensors with disimilar 
 
 **Appendix: Custom CSV Loader** Loading CSV files, A Test Dataset, Custom Value Parsing, Extracting Data Columns, Splitting Test and Training.
 
-## Screenshots
+## :camera: Screenshots
 
 ![Example screenshot](./img/.png)
 
-## Technologies
+## :signal_strength: Technologies
 
 * [TensorFlow.js v0.1.7](https://js.tensorflow.org/), an open-source hardware-accelerated JavaScript library for training and deploying machine learning models.
-
 * [@tensorflow/tfjs-node v0.2.1](https://www.npmjs.com/package/@tensorflow/tfjs-node), a node.js tensorflow package.
-
-* [node.js v10.15.0 LTS](https://nodejs.org)
-
-* [Lodash v4.17.11](https://lodash.com/), a modern JavaScript utility library delivering modularity, performance & extras. It has lots of methods but is slow.
-
+* [node.js v12 LTS](https://nodejs.org)
+* [Lodash v4](https://lodash.com/), a modern JavaScript utility library delivering modularity, performance & extras. It has lots of methods but is slow.
 * [Javascript playground](https://stephengrider.github.io/JSPlaygrounds/), a sandbox for writing javascript code and seeing the result on the right.
 
-## Setup
+## :floppy_disk: Setup
 
-It was necessary to install Python on my PC for this to compile.
+* It was necessary to install Python on my PC for this to compile.
 
-## Code Examples
+## :computer: Code Examples
 
-## Features
+## :cool: Features
 
 * feature
 
-## Status & To-Do List
+## :clipboard: Status & To-Do List
 
-* Status: .
+* Status: In work
+* To-Do: add detail to General Info section. Add screen-shots of individual projects.
 
-* To-Do: add detail to General Ino section. Add screen-shots of individual projects.
+## :clap: Inspiration
 
-## Inspiration
+* Code from Udemy Course [Machine Learning With Javascript](https://www.udemy.com/machine-learning-with-javascript/learn/v4/content).
 
-Code from Udemy Course [Machine Learning With Javascript](https://www.udemy.com/machine-learning-with-javascript/learn/v4/content).
+## :envelope: Contact
 
-## Contact
-
-Created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
